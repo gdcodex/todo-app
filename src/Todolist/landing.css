@@ -1,0 +1,148 @@
+.landing{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    -webkit-animation: rotate-out-diag-1 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: rotate-out-diag-1 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation-delay: 1.9s;
+    z-index: 100;
+    /* display: none; */
+}
+.landing section{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.first-land{
+    background-color: #d24a58;
+    -webkit-animation: scale-in-hor-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-hor-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    
+}
+.second-land{
+    background-color: #534d4d;
+   
+    -webkit-animation: scale-in-hor-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: scale-in-hor-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay:0.4s ;
+
+}
+.third-land{
+    background-color: #d24a58;
+    -webkit-animation: scale-in-hor-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-hor-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 0.6s;
+}
+.fourth-land{
+    background-color: #534d4d;
+  
+    -webkit-animation: scale-in-hor-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-hor-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 1s;
+}
+
+ @-webkit-keyframes scale-in-hor-right {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-hor-right {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+  }
+  
+
+ @-webkit-keyframes scale-in-hor-left {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-hor-left {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+  }
+  
+
+ @-webkit-keyframes rotate-out-diag-1 {
+    0% {
+      -webkit-transform: rotate3d(1, 1, 0, 360deg);
+              transform: rotate3d(1, 1, 0, 360deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate3d(1, 1, 0, 0deg);
+              transform: rotate3d(1, 1, 0, 0deg);
+      opacity: 0;
+    }
+  }
+  @keyframes rotate-out-diag-1 {
+    0% {
+      -webkit-transform: rotate3d(1, 1, 0, 360deg);
+              transform: rotate3d(1, 1, 0, 360deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate3d(1, 1, 0, 0deg);
+              transform: rotate3d(1, 1, 0, 0deg);
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  

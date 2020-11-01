@@ -1,6 +1,7 @@
 import { Button } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import React, { useEffect, useState } from 'react';
+import Landing from './landing';
 import './todo.css';
 
 
@@ -18,7 +19,6 @@ const App = () => {
     };
     const deletee = (e) => {
         var neww = e.target.value;
-        console.log(neww);
         setlist(() => {
             return list.filter(item => item !== neww);
         })
@@ -39,7 +39,7 @@ const App = () => {
     const arraytodo = [];
     if (list !== []) {
         list.forEach((item) => arraytodo.push(
-            <div className="card">
+            <div className="card" key={item}>
             <div className="item-todo">
             <input type="text" key={item + "h"} disabled className="my-todo-item" value={item} onMouseOver={(e)=>{
                 const {value} = e.target
@@ -66,6 +66,7 @@ const App = () => {
 
     return (
         <>
+            <Landing/>
             <div className="todo-layout">
                 <div className="add-todos">
                     {/* <input type="text" name="todo" value={todo}  onChange={(e)=>{
@@ -75,10 +76,10 @@ const App = () => {
 
 
                     <TextField label="todos" size="small" margin="normal" color='secondary' id="outlined-secondary" variant="outlined" name="todo" value={todo} onChange={(e) => {
-                        console.log(e.target.value);
                         settodo([e.target.value])
                     }} />
-                    <Button style={{  backgroundImage: 'linear-gradient(120deg, #ec6969 0%, #D24A58 100%)', color: "seashell" }} onClick={add}>Add</Button>
+                    <Button variant='outlined' color='secondary' onClick={add}>Add</Button>
+                    {/* style={{  backgroundImage: 'linear-gradient(120deg, #ec6969 0%, #D24A58 100%)', color: "seashell" }}  */}
                     
                 </div>
  
@@ -104,8 +105,8 @@ const App = () => {
 </g>
 <defs>
 <linearGradient id="paint0_linear" x1="690.579" y1="155.394" x2="378.596" y2="285.083" gradientUnits="userSpaceOnUse">
-<stop offset="0.588542" stop-color="#EC6969" stop-opacity="0.85"/>
-<stop offset="1" stop-color="#D24A58"/>
+<stop offset="0.588542" stopColor="#EC6969" stopOpacity="0.85"/>
+<stop offset="1" stopColor="#D24A58"/>
 </linearGradient>
 </defs>
 </svg>
